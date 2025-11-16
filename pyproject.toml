@@ -1,0 +1,42 @@
+[project]
+name = "ruffyt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Markus", email = "datamastery87@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi==0.121.2",
+]
+
+[project.scripts]
+update-packages = "ruffyt:main"
+
+[project.optional-dependencies]
+database = [
+    "sqlalchemy>=2.0.44",
+]
+plot = [
+    "matplotlib>=3.10.7",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.9,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pre-commit>=4.4.0",
+    "pytest>=9.0.1",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.14.5",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "UP", "B", "SIM", "I"]
+# ignore = ["E302"]
+preview = true
+
