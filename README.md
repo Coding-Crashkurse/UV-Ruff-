@@ -38,9 +38,7 @@ All of these tools pull their dependencies from the uv-managed virtual
 environment, so you never have to activate a venv manually.
 
 ## Updating dependencies
-
-`uv` intentionally does not auto-upgrade already-locked packages, so the project
-exposes a helper CLI in `src/ruffyt/__init__.py`. Run it with:
+UV does not provide a function for updating depencies yet.
 
 ```bash
 uv run update-packages
